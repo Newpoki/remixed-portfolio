@@ -1,5 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { PageLayout } from "./components/page-layout";
 import styles from "./styles/app.css";
 
 export const meta: MetaFunction = () => ({
@@ -30,10 +31,12 @@ export default function App() {
         <Links />
       </head>
       <body className="h-screen w-screen overflow-hidden bg-zinc-800" id="body">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <PageLayout>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </PageLayout>
       </body>
     </html>
   );

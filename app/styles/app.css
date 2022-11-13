@@ -540,6 +540,10 @@ html {
   top: 0.5rem;
 }
 
+.-top-0 {
+  top: -0px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -560,6 +564,16 @@ html {
   z-index: 40;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -574,6 +588,14 @@ html {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -779,6 +801,10 @@ html {
   padding-right: 1.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-playfair {
   font-family: Playfair Display;
 }
@@ -796,6 +822,16 @@ html {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {

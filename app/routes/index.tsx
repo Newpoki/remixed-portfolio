@@ -1,13 +1,6 @@
-import { Navigation } from "~/components/navigation/navigation";
-import { YellowSplashWithPicture } from "~/icons";
-
 export default function Index() {
   return (
-    <div className="relative">
-      <Navigation />
-
-      <YellowSplashWithPicture className="relative -top-14 right-0 z-0  fill-yellow-400" />
-
+    <>
       <main className="relative z-10  px-6 lg:w-1/2 lg:px-28">
         <p className="mb-6 text-xl font-bold uppercase text-yellow-300 lg:text-3xl">
           Web Developper
@@ -21,6 +14,6 @@ export default function Index() {
           I'm a Front End developper, and I enjoy working on React and TS projects
         </p>
       </main>
-    </div>
+    </>
   );
 }
