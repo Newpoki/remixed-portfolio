@@ -1,4 +1,4 @@
-import { Navigation } from "~/components/navigation";
+import { Navigation } from "~/components/navigation/navigation";
 import { YellowSplashWithPicture } from "~/icons";
 
 export default function Index() {
