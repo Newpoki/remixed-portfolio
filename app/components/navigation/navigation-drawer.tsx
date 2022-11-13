@@ -12,17 +12,22 @@ type Props = {
   isOpen: boolean;
 };
 
+const ANIMATIONS_DURATION = 300;
+
 export const NavigationDrawer = ({ isOpen }: Props) => {
   return (
     <div
-      className={classNames(
-        "absolute left-0 top-0 h-screen w-screen -translate-x-full bg-neutral-800/80 opacity-0 transition-opacity duration-500",
-        { "translate-x-0": isOpen, "opacity-100": isOpen }
-      )}
+      className={classNames("absolute left-0 top-0 h-screen w-screen -translate-x-full", {
+        // Display the drawer to the user
+        "translate-x-0": isOpen,
+        // Wait for the opacity and the links menu to end transition before transitioning
+        // We only want the delay when closing the drawer
+        [`delay-${ANIMATIONS_DURATION}`]: !isOpen,
+      })}
     >
       <div
         className={classNames(
-          "inline-flex h-screen -translate-x-full flex-col bg-neutral-700 p-6 duration-500",
+          `relative z-50 inline-flex h-screen -translate-x-full flex-col bg-neutral-700 p-6 duration-${ANIMATIONS_DURATION}`,
           { "translate-x-0": isOpen }
         )}
       >
@@ -47,6 +52,13 @@ export const NavigationDrawer = ({ isOpen }: Props) => {
           Settings
         </button>
       </div>
+
+      <div
+        className={classNames(
+          "absolute top-0 left-0 z-40 h-screen w-screen bg-neutral-800/80 opacity-0 transition-opacity duration-300",
+          { "opacity-100": isOpen }
+        )}
+      />
     </div>
   );
 };
